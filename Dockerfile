@@ -1,9 +1,9 @@
-FROM alpine:3.4
-MAINTAINER Limbomedia <admin@limbomedia.net>
+FROM alpine:3.10.1
+MAINTAINER ThomasKuh <t@kuhlins.org>
 
-RUN apk add --update openjdk8-jre-base && rm -rf /var/cache/apk/*
+RUN apk add --update openjdk11-jre-headless && rm -rf /var/cache/apk/*
 
-ADD http://limbomedia.net/res/files/limbodns-3.0-jar-with-dependencies.jar /
+ADD https://repo.kuhlins.org/artifactory/public/net/limbomedia/limbodns/5.0/limbodns-5.0-jar-with-dependencies.jar /limbodns.jar
 RUN mkdir data
 
 VOLUME /data
@@ -12,4 +12,4 @@ EXPOSE 7777
 EXPOSE 53/tcp
 EXPOSE 53/udp
 
-ENTRYPOINT java -Ddir=/data -jar /limbodns-3.0-jar-with-dependencies.jar
+ENTRYPOINT java -Ddir=/data -jar /limbodns.jar
