@@ -11,11 +11,7 @@ Startup (interactive):
     docker run -i -t -p 7777:7777 -p 53:53/tcp -p 53:53/udp -v DATA-DIR:/data limbomedia/limbodns
 
 
-
-Links:
-
-[Homepage](http://limbomedia.net/etc/limbodns)
-
-[Sources](https://github.com/limbomedia/limbodns)
-
-[Docker](https://hub.docker.com/r/limbomedia/limbodns/)
+## Links:
+* [Setup instructions and download](https://limbomedia.net/etc/limbodns)
+* [GitHub, Sources](https://github.com/thomaskuh/limbodns)
+* [Docker](https://hub.docker.com/r/limbomedia/limbodns/)
