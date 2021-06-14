@@ -3,7 +3,7 @@ MAINTAINER ThomasKuh <t@kuhlins.org>
 
 RUN apk add --update openjdk11-jre-headless && rm -rf /var/cache/apk/*
 
-ADD https://repo.kuhlins.org/artifactory/public/net/limbomedia/limbodns/5.3/limbodns-5.3-jar-with-dependencies.jar /limbodns.jar
+ADD https://repo.kuhlins.org/artifactory/public/net/limbomedia/limbodns/5.4/limbodns-5.4-jar-with-dependencies.jar /limbodns.jar
 RUN mkdir data
 
 VOLUME /data
